@@ -2,8 +2,6 @@
 
 This is a project based on a simulated database about South African criminal records
 
-# South African Criminal Records Database
-
 # Project Overview
 
 This project focuses on querying and analyzing a simulated South African criminal records dataset using SQL.
