@@ -32,13 +32,13 @@ SELECT * FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database];
 
 ----2. Count the total number of cases in the table.
 
-SELECT COUNT(RecordID) AS Number_of_cases
+SELECT COUNT(*) AS Number_of_cases
 FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database];
 
 ----3. Count the number of cases in each province.
 
 SELECT [Province],
-COUNT(RecordID) AS Number_of_cases_in_each_province
+COUNT(*) AS Number_of_cases_in_each_province
 FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database]
 GROUP BY [Province];
 
@@ -61,10 +61,10 @@ WHERE [RiskLevel] = 'High' OR [RiskLevel] = 'Critical';
 
 ----7. Calculate the average Financial Score of all suspects.
 
-SELECT AVG(financialscore) AS Average_financial_score
+SELECT AVG(CAST(financialscore AS FLOAT)) AS Average_financial_score
 FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database];
 
-----8. Find the highest Estimated Fraud Amount recorded.
+----8. Find average Financial Score of all suspects.
 
 SELECT TOP 1 [EstimatedFraudAmount_ZAR]
 FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database]
@@ -91,6 +91,7 @@ SELECT COUNT( CaseStatus) AS Not_Arrested
 FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database]
 WHERE [Arrested] = 'No';
 
+
 ----12. Count the number of cases associated with each bank.
 
 SELECT [BankInvolved],
@@ -103,7 +104,8 @@ GROUP BY [BankInvolved];
 SELECT [Province],
 SUM(EstimatedFraudAmount_ZAR) AS total_Estimated_Fraud_Amount_per_province
 FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database]
-GROUP BY [Province];
+GROUP BY [Province]
+ORDER BY total_Estimated_Fraud_Amount_per_province DESC;
 
 ----14. Retrieve all suspects older than 50 years.
 
@@ -176,12 +178,12 @@ SELECT [InvestigatingOfficer],
 COUNT(*) AS total_cases_handled_InvestigatingOfficer
 FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database]
 GROUP BY [InvestigatingOfficer]
-ORDER BY total_cases_handled_InvestigatingOfficer;
+ORDER BY total_cases_handled_InvestigatingOfficer DESC;
 
 ----25. Calculate the average Estimated Fraud Amount per crime type.
 
 SELECT [CrimeType],
-AVG(EstimatedFraudAmount_ZAR) AS Average_Estimated_Fraud_Amount_per_crime_type
+AVG(CAST(EstimatedFraudAmount_ZAR AS FLOAT)) AS Average_Estimated_Fraud_Amount_per_crime_type
 FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database]
 GROUP BY [CrimeType];
 
@@ -202,7 +204,7 @@ YEAR(CrimeDate) AS CrimeYear,
 COUNT(*) AS CaseCount
 FROM [SA_Criminal_Records_DB].[dbo].[south_africa_criminal_database]
 GROUP BY YEAR(CrimeDate)
-ORDER BY CrimeYear;
+ORDER BY CaseCount DESC;
 
 ----29. Display all suspects with a Financial Score below 500.
 
