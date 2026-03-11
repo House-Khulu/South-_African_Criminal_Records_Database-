@@ -1,117 +1,225 @@
-# South African Criminal Records Database
-
-# Project Overview
+South African Criminal Records Database (SQL Analysis)
+Project Overview
 
 This project focuses on querying and analyzing a simulated South African criminal records dataset using SQL.
 
-# Objectives
+The goal is to demonstrate data analysis, SQL querying proficiency, and the ability to extract meaningful insights from structured datasets that resemble real-world law enforcement data.
 
-* The purpose of the project is to demonstrate practical data querying skills, analytical thinking, and the ability to extract insights from structured data using real-world–style scenarios.
+This project forms part of a data analytics portfolio showcasing practical skills in data exploration, aggregation, and analytical reporting.
 
-# Dataset Description
+Project Objectives
 
-The dataset used in this project is "simulated data" created for educational and portfolio purposes.
+The objectives of this project are to:
 
-It resembles real-world criminal case records in South Africa and includes information such as:
+Demonstrate SQL querying and analytical problem-solving
 
-* Case details
-* Crime type
-* Province
-* Suspect demographics
-* Risk level
-* Estimated fraud amounts
-* Arrest status
-* Case outcomes
+Extract insights from a structured relational dataset
 
-# Key Questions Answered
+Practice data exploration and aggregation techniques
 
-The analysis addresses 30 SQL questions and the insights extracted were as follows:
+Translate raw data into meaningful analytical insights
 
-1. The total number of Cases recorded is 1000
+Present findings in a clear and professional format
 
-2.Northern Cape has the highest number of cases of 131
+Dataset Description
 
-3. We have 8 crime types :
--Fraud
--Identity Theft
--Money Laundering
--Cybercrime
--Vehicle Theft
--Drug Trafficking
-- Corruption
--Armed Robbery
+The dataset used in this project is simulated data created for educational and portfolio purposes only.
 
-*Cybercrime is the most common crime with 158 cases recorded
+It is designed to resemble criminal case records in South Africa and includes the following information:
 
-4.The average Financial Score of all suspects is 576.189
+Case details
 
-5.The average Financial Score of all suspects is R4 999 005
+Crime type
 
-6. Arrested suspects = 474
-- Not Arrested suspects =526
+Province
 
-7. The bank related cases where the banks:
- - Capitec
- - Standard bank
- - Nedbank
- - Afican Bank
- - FNB
- - Absa
+Suspect demographics
 
-*Standard has the most caes of 181
+Financial risk score
 
-8. Northern Cape has the most Estimated Fraud Amount compared to other provinces
+Estimated fraud amount
 
-9. 217 of the cases resulted in a Convicted status.
+Arrest status
 
-10. With RiskLevel cases namely in:
-  - Critical
-  - Low
-  - Medium
-  - High
+Investigating officer
 
-  *Critical level has the most cases
+Case outcome
 
-11.Total_Estimated_Fraud_Amount is R2 539 575 602
+Year of incident
 
-12.The youngest suspect in the dataset is 18 years of Age and the oldest suspect is 65 years of Age.
+Key Analytical Questions & Insights
 
-13. With the Investigating Officers:
-  - Officer Naidoo
-  - Officer Nkosi
-  - Officer Smith
-  - Officer Mabena
-  - Officer Moyo
+The dataset was analyzed through 30 SQL queries. Key insights include:
 
- *Officer Moyo has the most cases of 222
+1. Total Cases
 
-14. Fraud has the most average Estimated Fraud Amount of R2 726 638
+1,000 criminal cases are recorded in the dataset.
 
-15. From 2016 to 2025 - 2022 had the most number of cases of 103
+2. Province with the Most Cases
 
-# Tools & Technologies
+Northern Cape recorded the highest number of cases with 131 cases.
 
-* Microsoft SQL Server Management Studio (SSMS)
-* Git Bash
-* Visual Studio
-* GitHub
+3. Crime Types
 
-# Methodology
+There are 8 crime categories in the dataset:
 
-1. Imported the dataset into SQL Server
-2. Explored table structure and verified data types
-3. Wrote SQL queries to answer analytical questions
-5. Uploaded scripts and documentation to GitHub
+Fraud
 
-# Decision-Making / Recommendation Stage
+Identity Theft
 
-- Since Cypercrime is the most common crime recorded, we can implement more secure, strict and reliable security majors particularly in Cyper-Security, to ensure reduction or prevention and safety in Cybercrime related cases.
-- Northern Cape is the most province with the highest cases record - we can deploy more Police men and women to enforce the protection and reduce crime rates.
+Money Laundering
 
+Cybercrime
 
-# Project Structure
-data/ — dataset files
-queries/ — SQL scripts
-docs/ — supporting documentation
-README.md — project overview
+Vehicle Theft
+
+Drug Trafficking
+
+Corruption
+
+Armed Robbery
+
+Insight:
+
+Cybercrime is the most common crime with 158 cases recorded.
+
+4. Financial Risk Score
+
+The average financial risk score of suspects is 576.19.
+
+5. Estimated Fraud Amount
+
+The average estimated fraud amount per case is R4,999,005.
+
+6. Arrest Status
+
+Arrested suspects: 474
+
+Not arrested suspects: 526
+
+7. Bank-Related Cases
+
+Cases involving financial institutions include:
+
+Capitec
+
+Standard Bank
+
+Nedbank
+
+African Bank
+
+FNB
+
+Absa
+
+Insight:
+
+Standard Bank is linked to the highest number of cases (181).
+
+8. Fraud Amount by Province
+
+Northern Cape records the highest total estimated fraud amount.
+
+9. Case Outcomes
+
+217 cases resulted in a conviction.
+
+10. Risk Levels
+
+Cases are categorized into the following risk levels:
+
+Low
+
+Medium
+
+High
+
+Critical
+
+Insight:
+
+Critical risk cases appear most frequently in the dataset.
+
+11. Total Estimated Fraud
+
+The total estimated fraud amount across all cases is:
+
+R2,539,575,602
+
+12. Suspect Age Range
+
+Youngest suspect: 18 years old
+
+Oldest suspect: 65 years old
+
+13. Investigating Officers
+
+The dataset includes the following officers:
+
+Officer Naidoo
+
+Officer Nkosi
+
+Officer Smith
+
+Officer Mabena
+
+Officer Moyo
+
+Insight:
+
+Officer Moyo handled the highest number of cases (222 cases).
+
+14. Fraud by Crime Type
+
+Fraud has the highest average estimated fraud amount, averaging R2,726,638 per case.
+
+15. Cases by Year
+
+Data spans from 2016 to 2025.
+
+Insight:
+
+2022 recorded the highest number of cases (103).
+
+Tools & Technologies
+
+The following tools were used in this project:
+
+SQL Server Management Studio (SSMS) – SQL querying and data analysis
+
+Git Bash – version control operations
+
+Visual Studio Code – development environment
+
+GitHub – project repository and documentation
+
+Methodology
+
+The analysis followed these steps:
+
+Imported the dataset into SQL Server
+
+Explored the table structure and schema
+
+Validated data types and data consistency
+
+Developed SQL queries to answer analytical questions
+
+Interpreted query results to extract insights
+
+Uploaded queries and documentation to GitHub
+
+Recommendations Based on Insights
+
+Based on the analysis, several observations can inform decision-making:
+
+Cybercrime Prevention
+
+Since Cybercrime is the most common crime, strengthening cybersecurity policies, digital monitoring, and fraud detection systems could help reduce cyber-related offenses.
+
+Provincial Crime Focus
+
+Because Northern Cape shows the highest number of cases and fraud amounts, additional law enforcement resources and investigative capacity could be allocated to this province.
 
